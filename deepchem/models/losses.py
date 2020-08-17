@@ -109,7 +109,7 @@ class SoftmaxCrossEntropy(Loss):
   def __call__(self, output, labels):
     output, labels = _make_shapes_consistent(output, labels)
     output, labels = _ensure_float(output, labels)
-    return tf.nn.softmax_cross_entropy_with_logits(labels, output)
+    return tf.nn.softmax_cross_entropy_with_logits_v2(labels, output)
 
 
 class SparseSoftmaxCrossEntropy(Loss):
