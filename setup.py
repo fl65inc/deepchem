@@ -2,12 +2,12 @@ import sys
 import time
 from setuptools import setup, find_packages
 
-if '--release' in sys.argv:
-  release = True
-  sys.argv.remove('--release')
-else:
-  # Build a nightly package by default.
+if '--nightly' in sys.argv:
   release = False
+  sys.argv.remove('--nightly')
+else:
+  # Build a non-nightly package by default.
+  release = True
 
 if release:
   project_name = 'deepchem'
