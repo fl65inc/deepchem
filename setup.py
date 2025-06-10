@@ -75,7 +75,7 @@ setup(name='deepchem',
       },
       install_requires=[
           'joblib',
-          'numpy<2',
+          'numpy',
           'pandas',
           'scikit-learn',
           'sympy',
@@ -83,4 +83,4 @@ setup(name='deepchem',
           'rdkit',
       ],
       extras_require=extras,
-      python_requires='>=3.7,<3.12')
+      python_requires='>=3.7,<4')
